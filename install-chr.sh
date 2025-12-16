@@ -38,7 +38,7 @@ echo "## Preparing for image download and VM creation!"
 read -p "Please input CHR version to deploy (e.g. 6.38.2, 6.40.1, 7.18.2): " version
 
 # Check if image is already downloaded
-if [ -f /root/temp/chr-$version-legacy-bios.img ]; then
+if [ -f /root/temp/chr-$version.img ]; then
     echo "-- CHR image is available."
 else
     echo "-- Downloading CHR $version image file."
@@ -46,7 +46,6 @@ else
     echo "---------------------------------------------------------------------------"
     # wget https://download.mikrotik.com/routeros/$version/chr-$version.img.zip
     wget https://github.com/elseif/MikroTikPatch/releases/download/$version/chr-$version.img.zip
-    # wget https://github.com/elseif/MikroTikPatch/releases/download/$version/chr-$version-legacy-bios.img.zip
     unzip chr-$version.img.zip
     echo "---------------------------------------------------------------------------"
 fi
@@ -65,7 +64,7 @@ echo "-- Converting image to qcow2 format..."
 qemu-img convert \
     -f raw \
     -O qcow2 \
-    /root/temp/chr-$version-legacy-bios.img \
+    /root/temp/chr-$version.img \
     /root/temp/chr-$version.qcow2
     qemu-img resize chr-$version.qcow2 256M
 
