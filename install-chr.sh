@@ -78,7 +78,7 @@ qm create $vmID \
   --memory 512 \
   --onboot no \
   --sockets 1 \
-  --cores 1
+  --cores 2
 
 # Import disk to local-lvm
 echo "-- Importing disk to local-lvm..."
