@@ -66,7 +66,7 @@ qemu-img convert \
     -O qcow2 \
     /root/temp/chr-$version.img \
     /root/temp/chr-$version.qcow2
-    qemu-img resize chr-$version.qcow2 256M
+    qemu-img resize chr-$version.qcow2 1024M
 
 # Create minimal VM
 echo "-- Creating CHR VM with ID $vmID"
