@@ -27,7 +27,7 @@ This method is ideal if you want to execute the script instantly without cloning
 #### Using `curl`
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/simda-buru/CHR-XX/main/install-chr.sh)
+bash <(curl -s https://raw.githubusercontent.com/simda-buru/CHR-6.x/main/install-chr.sh)
 ```
 ### 🔹 Option 2: Clone the Repository First (Recommended for Review or Customization)
 
